@@ -38,6 +38,9 @@ GEM
     multipart-post (2.0.0)
     naught (1.0.0)
     rack (1.5.2)
+    rack-canonical-host (0.0.8)
+      addressable
+      rack (~> 1.0)
     rack-protection (1.5.2)
       rack
     rack-test (0.6.2)
@@ -90,4 +93,5 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  rack-canonical-host (= 0.0.8)
   twitter (>= 5.0.0)

@@ -11,6 +11,11 @@ configure do
   end
 end
 
+# Run heroku config:add CANONICAL_HOST=yourdomain.com
+# For more information, see: https://github.com/tylerhunt/rack-canonical-host#usage
+require 'rack-canonical-host'
+use Rack::CanonicalHost, ENV['CANONICAL_HOST'] if ENV['CANONICAL_HOST']
+
 map Sinatra::Application.assets_prefix do
   run Sinatra::Application.sprockets
 end
