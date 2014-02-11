@@ -104,4 +104,4 @@ DEPENDENCIES
   foreman (= 0.63.0)
   heroku-api (= 0.3.17)
   rack-canonical-host (= 0.0.8)
-  twitter (>= 5.0.0)
+  twitter (= 5.6.0)
