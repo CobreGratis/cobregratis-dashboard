@@ -1,7 +1,6 @@
-<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-  <div data-id="heroku_dyno_web" data-view="Meter" data-title="Web Dynos" data-min="0" data-max="10"></div>
-</li>
+<div class="heroku-info">
+	<h1 class="title" data-bind="title"></h1>
 
-<li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-  <div data-id="heroku_dyno_worker" data-view="Meter" data-title="Workers" data-min="0" data-max="10"></div>
-</li>
+	<span class="label" data-bind="issue_count"></span> issues
+</div>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
