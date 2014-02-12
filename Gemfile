@@ -8,6 +8,7 @@ gem 'twitter', '5.6.0'
 gem 'heroku-api', '0.3.17'
 gem 'activeresource', '3.2.16'
 gem 'newrelic_api', '1.2.4'
+gem 'rest-client'
 
 group :development do
   gem 'foreman', '0.63.0'
