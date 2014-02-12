@@ -1,10 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (3.2.16)
+      activesupport (= 3.2.16)
+      builder (~> 3.0.0)
+    activeresource (3.2.16)
+      activemodel (= 3.2.16)
+      activesupport (= 3.2.16)
+    activesupport (3.2.16)
+      i18n (~> 0.6, >= 0.6.4)
+      multi_json (~> 1.0)
     addressable (2.3.5)
     atomic (1.1.14)
     backports (3.5.0)
     buftok (0.2.0)
+    builder (3.0.4)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -39,12 +49,14 @@ GEM
     http (0.5.0)
       http_parser.rb
     http_parser.rb (0.6.0)
+    i18n (0.6.9)
     json (1.8.1)
     memoizable (0.4.0)
       thread_safe (~> 0.1.3)
     multi_json (1.8.4)
     multipart-post (2.0.0)
     naught (1.0.0)
+    newrelic_api (1.2.4)
     rack (1.5.2)
     rack-canonical-host (0.0.8)
       addressable
@@ -100,8 +112,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeresource (= 3.2.16)
   dashing
   foreman (= 0.63.0)
   heroku-api (= 0.3.17)
+  newrelic_api (= 1.2.4)
   rack-canonical-host (= 0.0.8)
   twitter (= 5.6.0)
