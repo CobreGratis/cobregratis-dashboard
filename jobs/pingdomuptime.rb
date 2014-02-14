@@ -28,8 +28,6 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
   responseCheck = RestClient.get(urlCheck, {"App-Key" => api_key})
   responseCheck = JSON.parse(responseCheck.body, :symbolize_names => true)
 
-  puts responseCheck.inspect
-
   uptime = 0
   oldUptime = 0
   count = 0
