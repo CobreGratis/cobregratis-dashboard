@@ -6,8 +6,15 @@ configure do
 
   helpers do
     def protected!
-     # Put any authentication code you want in here.
-     # This method is run before accessing any resource.
+      unless authorized? or ENV['HTTP_BASIC_PASSWORD'].nil?
+        response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+        throw(:halt, [401, "Not authorized\n"])
+      end
+    end
+
+    def authorized?
+      @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+      @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == ['cobregratis', ENV['HTTP_BASIC_PASSWORD']]
     end
   end
 end
