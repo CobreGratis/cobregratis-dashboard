@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
 
+ruby "2.3.0"
+
 gem 'dashing'
-gem 'rack-canonical-host', '0.0.8'
+gem 'rack-canonical-host', '0.1.0'
 
 ## Remove this if you don't need a twitter widget.
-gem 'twitter', '5.6.0'
-gem 'heroku-api', '0.3.17'
-gem 'activeresource', '3.2.16'
+gem 'twitter', '5.16.0'
+gem 'heroku-api', '0.4.0'
+gem 'activeresource', '4.0.0'
 gem 'newrelic_api', '1.2.4'
 gem 'rest-client'
 
 group :development do
-  gem 'foreman', '0.63.0'
+  gem 'foreman', '0.78.0'
 end
